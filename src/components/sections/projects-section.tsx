@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, GitFork } from "lucide-react";
 import { projects } from "@/lib/site";
+import { ProceduralProjectCover } from "@/components/cinematic/procedural-project-cover";
 import { SectionHeading } from "@/components/layout/section-heading";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
@@ -21,28 +22,25 @@ export function ProjectsSection() {
           {projects.map((p, i) => (
             <motion.div
               key={p.title}
-              initial={{ opacity: 0, y: 22 }}
+              initial={{ opacity: 0, y: 26 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.55, delay: i * 0.06 }}
             >
-              <Card className="group h-full overflow-hidden border-white/[0.09] bg-black/35 transition-shadow duration-500 hover:shadow-[0_0_0_1px_rgba(255,255,255,0.06),0_30px_80px_-40px_rgba(34,211,238,0.35)]">
+              <Card className="group h-full overflow-hidden border-white/[0.09] bg-black/35 shadow-[0_0_0_1px_rgba(251,191,36,0.06)] transition-all duration-500 hover:border-amber-500/25 hover:shadow-[0_0_0_1px_rgba(251,191,36,0.12),0_36px_100px_-48px_rgba(251,191,36,0.18)]">
                 <div className="relative aspect-[16/10] overflow-hidden">
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-br ${p.accent} opacity-90`}
-                    aria-hidden
-                  />
-                  <div
-                    className="absolute inset-0 opacity-40 mix-blend-overlay"
-                    style={{
-                      backgroundImage:
-                        "repeating-linear-gradient(135deg, rgba(255,255,255,0.06) 0, rgba(255,255,255,0.06) 1px, transparent 1px, transparent 10px)",
-                    }}
-                    aria-hidden
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#050508] via-[#050508]/35 to-transparent transition-transform duration-700 group-hover:scale-[1.02]" />
-                  <div className="absolute left-5 top-5 flex items-center gap-2 rounded-full border border-white/10 bg-black/40 px-3 py-1 text-[11px] text-white/75 backdrop-blur-md">
-                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.8)]" />
+                  {/* Procedural SVG cover — zero external assets */}
+                  <div className="absolute inset-0 z-[3]">
+                    <ProceduralProjectCover
+                      theme={p.coverTheme}
+                      accent={p.accent}
+                      fillContainer
+                      priority={i < 2}
+                    />
+                  </div>
+                  {/* Live indicator badge */}
+                  <div className="absolute left-5 top-5 z-[30] flex items-center gap-2 rounded-full border border-amber-500/25 bg-black/55 px-3 py-1 text-[11px] text-amber-100/90 backdrop-blur-md">
+                    <span className="h-1.5 w-1.5 rounded-full bg-amber-400 shadow-[0_0_12px_rgba(251,191,36,0.85)]" />
                     Concept / Build
                   </div>
                 </div>

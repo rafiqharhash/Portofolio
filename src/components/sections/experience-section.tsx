@@ -38,7 +38,7 @@ export function ExperienceSection() {
         />
 
         <div className="relative">
-          <div className="pointer-events-none absolute left-[18px] top-3 hidden h-[calc(100%-24px)] w-px bg-gradient-to-b from-cyan-400/50 via-white/15 to-violet-500/40 md:block" />
+          <div className="pointer-events-none absolute left-[18px] top-3 hidden h-[calc(100%-24px)] w-px bg-gradient-to-b from-amber-400/50 via-white/15 to-orange-500/40 md:block" />
 
           <div className="space-y-6">
             {steps.map((s, i) => (
@@ -50,13 +50,13 @@ export function ExperienceSection() {
                 viewport={{ once: true, margin: "-70px" }}
                 transition={{ duration: 0.5, delay: i * 0.05 }}
               >
-                <span className="absolute left-0 top-6 hidden h-9 w-9 items-center justify-center rounded-2xl border border-white/10 bg-black/50 text-cyan-200 shadow-[0_0_24px_-6px_rgba(34,211,238,0.55)] md:flex">
+                <span className="absolute left-0 top-6 hidden h-9 w-9 items-center justify-center rounded-2xl border border-white/10 bg-black/50 text-amber-200 shadow-[0_0_24px_-6px_rgba(251,191,36,0.55)] md:flex">
                   <s.icon className="h-4 w-4" />
                 </span>
                 <div className="rounded-3xl border border-white/[0.08] bg-gradient-to-br from-white/[0.05] to-transparent p-[1px]">
                   <div className="rounded-[22px] bg-black/45 p-6 backdrop-blur-xl md:p-8">
                     <div className="flex items-start gap-4 md:gap-6">
-                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] text-cyan-200 md:hidden">
+                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] text-amber-200 md:hidden">
                         <s.icon className="h-4 w-4" />
                       </span>
                       <div>

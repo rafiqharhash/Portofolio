@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.4"/>
+    </radialGradient>
+    <radialGradient id="core" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fde68a"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </radialGradient>
+  </defs>
+  <!-- Left wing -->
+  <path d="M50,30 L50,54 L5,78 L9,68 L44,51 Z" fill="url(#glow)" opacity="0.92"/>
+  <!-- Right wing (mirrored) -->
+  <path d="M50,30 L50,54 L95,78 L91,68 L56,51 Z" fill="url(#glow)" opacity="0.92"/>
+  <!-- Left wing shadow edge -->
+  <path d="M50,54 L5,78 L9,83 L50,58 Z" fill="#fbbf24" opacity="0.35"/>
+  <!-- Right wing shadow edge -->
+  <path d="M50,54 L95,78 L91,83 L50,58 Z" fill="#fbbf24" opacity="0.35"/>
+  <!-- Central spine / blade -->
+  <path d="M50,14 L57,37 L50,60 L43,37 Z" fill="url(#core)" opacity="0.97"/>
+  <!-- Top apex point -->
+  <path d="M50,8 L54,18 L50,26 L46,18 Z" fill="#fde68a" opacity="0.85"/>
+</svg>

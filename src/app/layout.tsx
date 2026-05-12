@@ -54,6 +54,10 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  icons: {
+    icon: [{ url: "/guardian-emblem.svg", type: "image/svg+xml" }],
+    apple: [{ url: "/guardian-emblem.svg", type: "image/svg+xml" }],
+  },
 };
 
 export const viewport: Viewport = {

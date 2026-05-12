@@ -79,11 +79,11 @@ export function SkillsSection() {
                       )}
                     >
                       <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                        <div className="absolute -left-24 top-0 h-40 w-40 rounded-full bg-cyan-400/10 blur-3xl" />
-                        <div className="absolute -right-24 bottom-0 h-40 w-40 rounded-full bg-violet-500/10 blur-3xl" />
+                        <div className="absolute -left-24 top-0 h-40 w-40 rounded-full bg-amber-400/10 blur-3xl" />
+                        <div className="absolute -right-24 bottom-0 h-40 w-40 rounded-full bg-orange-500/10 blur-3xl" />
                       </div>
                       <div className="relative flex items-start gap-3">
-                        <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-black/40 text-cyan-200">
+                        <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-black/40 text-amber-200">
                           <s.icon className="h-5 w-5" />
                         </span>
                         <div>

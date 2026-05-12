@@ -41,8 +41,8 @@ export function ContactSection() {
           transition={{ duration: 0.55 }}
           className="mx-auto max-w-xl"
         >
-          <div className="absolute inset-x-0 -z-10 mx-auto h-64 max-w-lg rounded-full bg-gradient-to-r from-cyan-500/20 via-sky-500/10 to-violet-500/20 blur-3xl" />
-          <Card className="border-white/[0.1] bg-white/[0.04] shadow-[0_0_0_1px_rgba(255,255,255,0.04),0_40px_120px_-60px_rgba(34,211,238,0.35)] backdrop-blur-2xl">
+          <div className="absolute inset-x-0 -z-10 mx-auto h-64 max-w-lg rounded-full bg-gradient-to-r from-amber-500/20 via-orange-500/10 to-amber-500/20 blur-3xl" />
+          <Card className="border-white/[0.1] bg-white/[0.04] shadow-[0_0_0_1px_rgba(255,255,255,0.04),0_40px_120px_-60px_rgba(251,191,36,0.35)] backdrop-blur-2xl">
             <CardContent className="p-8">
               <form className="space-y-6" onSubmit={onSubmit}>
                 <div className="space-y-2">
@@ -85,7 +85,7 @@ export function ContactSection() {
                 </Button>
                 <p className="text-center text-xs text-white/45">
                   Prefer direct email?{" "}
-                  <a className="text-cyan-200/90 underline-offset-4 hover:underline" href={`mailto:${site.email}`}>
+                  <a className="text-amber-200/90 underline-offset-4 hover:underline" href={`mailto:${site.email}`}>
                     {site.email}
                   </a>
                 </p>

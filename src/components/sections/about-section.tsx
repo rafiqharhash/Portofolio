@@ -71,7 +71,7 @@ export function AboutSection() {
                       key={item.t}
                       className="rounded-2xl border border-white/[0.07] bg-black/25 p-4"
                     >
-                      <item.icon className="mb-3 h-5 w-5 text-cyan-300/90" />
+                      <item.icon className="mb-3 h-5 w-5 text-amber-300/90" />
                       <p className="text-sm font-medium text-white">{item.t}</p>
                       <p className="mt-1 text-xs text-white/55">{item.d}</p>
                     </div>
@@ -88,7 +88,7 @@ export function AboutSection() {
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.55, delay: 0.08 }}
           >
-            <div className="absolute -inset-4 rounded-[28px] bg-gradient-to-b from-cyan-500/10 via-transparent to-violet-500/10 blur-2xl" />
+            <div className="absolute -inset-4 rounded-[28px] bg-gradient-to-b from-amber-500/10 via-transparent to-orange-500/10 blur-2xl" />
             <Card className="relative border-white/[0.09] bg-black/35">
               <CardContent className="p-8">
                 <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white/45">
@@ -97,11 +97,11 @@ export function AboutSection() {
                 <ol className="mt-8 space-y-8">
                   {timeline.map((row, idx) => (
                     <li key={row.title} className="relative pl-8">
-                      <span className="absolute left-0 top-1.5 h-2.5 w-2.5 rounded-full bg-gradient-to-br from-cyan-300 to-violet-400 shadow-[0_0_18px_rgba(34,211,238,0.55)]" />
+                      <span className="absolute left-0 top-1.5 h-2.5 w-2.5 rounded-full bg-gradient-to-br from-amber-300 to-orange-400 shadow-[0_0_18px_rgba(251,191,36,0.55)]" />
                       {idx !== timeline.length - 1 ? (
                         <span className="absolute left-[4px] top-5 h-[calc(100%+1.25rem)] w-px bg-gradient-to-b from-white/25 to-transparent" />
                       ) : null}
-                      <p className="text-xs font-semibold text-cyan-200/80">{row.year}</p>
+                      <p className="text-xs font-semibold text-amber-200/80">{row.year}</p>
                       <p className="mt-1 text-base font-medium text-white">{row.title}</p>
                       <p className="mt-2 text-sm text-white/55">{row.body}</p>
                     </li>

@@ -12,7 +12,7 @@ export function SectionHeading({ eyebrow, title, subtitle }: Props) {
   return (
     <div className="mx-auto mb-12 max-w-2xl text-center md:mb-16">
       <motion.p
-        className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-cyan-300/80"
+        className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-amber-400/85"
         initial={{ opacity: 0, y: 8 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}

@@ -43,10 +43,10 @@ export function SiteHeader() {
         >
           <span className="relative z-10">{site.name.split(" ")[0]}</span>
           <span className="text-white/40">.</span>
-          <span className="bg-gradient-to-r from-cyan-300 to-violet-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-amber-300 to-amber-500/90 bg-clip-text text-transparent">
             dev
           </span>
-          <span className="absolute -bottom-1 left-0 h-px w-0 bg-gradient-to-r from-cyan-400 to-violet-400 transition-all duration-300 group-hover:w-full" />
+          <span className="absolute -bottom-1 left-0 h-px w-0 bg-gradient-to-r from-amber-400 to-amber-600/80 transition-all duration-300 group-hover:w-full" />
         </a>
 
         <nav className="hidden items-center gap-1 rounded-2xl border border-white/[0.08] bg-black/30 px-1 py-1 backdrop-blur-xl md:flex">

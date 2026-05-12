@@ -21,6 +21,11 @@ export type Project = {
   githubUrl: string;
   liveUrl: string;
   accent: string;
+  /**
+   * Procedural cover theme — drives the ProceduralProjectCover component.
+   * Values: "code" | "coffee" | "prayer" | "hud"
+   */
+  coverTheme: "code" | "coffee" | "prayer" | "hud";
 };
 
 export const projects: Project[] = [
@@ -31,7 +36,8 @@ export const projects: Project[] = [
     stack: ["Next.js", "TypeScript", "Tailwind CSS"],
     githubUrl: "https://github.com",
     liveUrl: "https://vercel.com",
-    accent: "from-cyan-500/20 to-blue-600/10",
+    accent: "from-amber-500/20 to-yellow-600/10",
+    coverTheme: "code",
   },
   {
     title: "Coffee Shop Website",
@@ -41,6 +47,7 @@ export const projects: Project[] = [
     githubUrl: "https://github.com",
     liveUrl: "https://vercel.com",
     accent: "from-amber-500/20 to-orange-600/10",
+    coverTheme: "coffee",
   },
   {
     title: "Quran & Prayer App Concept",
@@ -49,7 +56,8 @@ export const projects: Project[] = [
     stack: ["UI Design", "Figma", "Mobile-first"],
     githubUrl: "https://github.com",
     liveUrl: "https://vercel.com",
-    accent: "from-emerald-500/20 to-teal-600/10",
+    accent: "from-amber-500/20 to-orange-600/10",
+    coverTheme: "prayer",
   },
   {
     title: "SAMP Police System",
@@ -58,6 +66,7 @@ export const projects: Project[] = [
     stack: ["Pawn", "MySQL", "Game scripting"],
     githubUrl: "https://github.com",
     liveUrl: "https://vercel.com",
-    accent: "from-violet-500/20 to-fuchsia-600/10",
+    accent: "from-orange-500/20 to-amber-600/10",
+    coverTheme: "hud",
   },
 ];

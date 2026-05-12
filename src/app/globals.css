@@ -4,10 +4,11 @@
   --background: #050508;
   --foreground: #f4f4f5;
   --muted: #a1a1aa;
-  --accent: #22d3ee;
-  --accent-foreground: #041016;
-  --accent-glow: rgba(34, 211, 238, 0.55);
-  --ring: #67e8f9;
+  --accent: #fbbf24;
+  --accent-foreground: #0a0a0c;
+  --accent-glow: rgba(251, 191, 36, 0.45);
+  --accent-cool: #22d3ee;
+  --ring: #fcd34d;
   --card: rgba(255, 255, 255, 0.04);
   --card-foreground: #f4f4f5;
   --muted-foreground: #a1a1aa;
