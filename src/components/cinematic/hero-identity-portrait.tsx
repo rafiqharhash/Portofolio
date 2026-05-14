@@ -22,14 +22,8 @@ export function HeroIdentityPortrait() {
   const mx = useMotionValue(0);
   const my = useMotionValue(0);
 
-  const rotateX = useSpring(useTransform(my, [-0.5, 0.5], [7, -7]), {
-    stiffness: 260,
-    damping: 24,
-  });
-  const rotateY = useSpring(useTransform(mx, [-0.5, 0.5], [-9, 9]), {
-    stiffness: 260,
-    damping: 24,
-  });
+  const rotateX = 0;
+  const rotateY = 0;
 
   function onMove(e: React.MouseEvent<HTMLDivElement>) {
     if (!wrapRef.current || reduce) return;
@@ -59,7 +53,7 @@ export function HeroIdentityPortrait() {
     >
       {/* ── Ambient atmospheric glow ── */}
       <motion.div
-        className="pointer-events-none absolute -inset-16 rounded-full bg-[radial-gradient(circle_at_50%_40%,rgba(251,191,36,0.30),rgba(180,83,9,0.08)_35%,transparent_68%)] blur-3xl"
+        className="pointer-events-none absolute -inset-16 rounded-full bg-[radial-gradient(circle_at_50%_40%,rgba(251,191,36,0.30),rgba(180,83,9,0.08)_35%,transparent_68%)] will-change-[opacity,transform]"
         animate={
           reduce
             ? undefined
@@ -74,13 +68,12 @@ export function HeroIdentityPortrait() {
       {/* ── Procedural cape silhouette (CSS only) ── */}
       {/* Centre spread */}
       <div
-        className="pointer-events-none absolute -bottom-6 left-1/2 h-[38%] w-[140%] -translate-x-1/2 rounded-[100%] bg-black/90 blur-2xl"
-        style={{ maskImage: "linear-gradient(to top, black, transparent)" }}
+        className="pointer-events-none absolute -bottom-6 left-1/2 h-[38%] w-[140%] -translate-x-1/2 rounded-[100%] bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.9),transparent_70%)]"
         aria-hidden
       />
       {/* Left wing drape */}
       <motion.div
-        className="pointer-events-none absolute -bottom-10 left-[12%] h-28 w-[48%] rounded-full bg-black/65 blur-xl"
+        className="pointer-events-none absolute -bottom-10 left-[12%] h-28 w-[48%] rounded-[100%] bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.65),transparent_70%)]"
         animate={
           reduce
             ? undefined
@@ -91,7 +84,7 @@ export function HeroIdentityPortrait() {
       />
       {/* Right wing drape */}
       <motion.div
-        className="pointer-events-none absolute -bottom-10 right-[12%] h-28 w-[48%] rounded-full bg-black/65 blur-xl"
+        className="pointer-events-none absolute -bottom-10 right-[12%] h-28 w-[48%] rounded-[100%] bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.65),transparent_70%)]"
         animate={
           reduce
             ? undefined
@@ -103,18 +96,13 @@ export function HeroIdentityPortrait() {
 
       {/* ── Slow float + 3D tilt ── */}
       <motion.div
-        className="relative"
-        animate={reduce ? undefined : { y: [0, -10, 0] }}
+        className="relative will-change-transform"
+        animate={reduce ? undefined : { y: [0, -6, 0] }}
         transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
-        style={{
-          rotateX: reduce ? 0 : rotateX,
-          rotateY: reduce ? 0 : rotateY,
-          transformStyle: "preserve-3d",
-        }}
       >
         {/* ── Animated conic rim light ── */}
         <motion.div
-          className="pointer-events-none absolute -inset-[3px] rounded-[28px] opacity-90"
+          className="pointer-events-none absolute -inset-[3px] rounded-[28px] opacity-90 will-change-transform"
           style={{
             background:
               "conic-gradient(from 180deg at 50% 50%, rgba(251,191,36,0.60), transparent 28%, rgba(251,191,36,0.18) 52%, transparent 72%, rgba(251,191,36,0.50))",
@@ -141,13 +129,11 @@ export function HeroIdentityPortrait() {
         <div className="relative overflow-hidden rounded-[26px] border border-amber-500/25 bg-[#070709] shadow-[0_0_0_1px_rgba(251,191,36,0.12),0_40px_120px_-40px_rgba(0,0,0,0.95),0_0_80px_-20px_rgba(251,191,36,0.28)]">
           <div className="relative aspect-[3/4] w-full overflow-hidden">
 
-            {/* ── Interactive shine layer ── */}
-            <motion.div
+            {/* ── Interactive shine layer (simplified) ── */}
+            <div
               className="absolute inset-0 z-10 transition-[background] duration-300"
-              initial={false}
               style={{
-                background: `radial-gradient(520px circle at ${shinePos.x}% ${shinePos.y}%, rgba(251,191,36,0.32), transparent 55%)`,
-                mixBlendMode: "soft-light",
+                background: `radial-gradient(400px circle at ${shinePos.x}% ${shinePos.y}%, rgba(251,191,36,0.15), transparent 50%)`,
               }}
               aria-hidden
             />
@@ -197,32 +183,18 @@ export function HeroIdentityPortrait() {
               aria-hidden
             />
 
-            {/* ── Procedural fog / smoke wisps ── */}
+            {/* ── Procedural fog / smoke wisps (simplified, removed heavy blends) ── */}
             <motion.div
-              className="pointer-events-none absolute inset-0 z-[12] mix-blend-soft-light"
+              className="pointer-events-none absolute inset-0 z-[12] will-change-[transform,opacity]"
               animate={
                 reduce
                   ? undefined
-                  : { x: ["-8%", "8%", "-5%"], opacity: [0.25, 0.44, 0.30] }
+                  : { opacity: [0.1, 0.2, 0.1] }
               }
               transition={{ duration: 11, repeat: Infinity, ease: "easeInOut" }}
               style={{
                 background:
-                  "linear-gradient(105deg, transparent 20%, rgba(255,255,255,0.07) 45%, transparent 70%)",
-              }}
-              aria-hidden
-            />
-            <motion.div
-              className="pointer-events-none absolute inset-0 z-[12] opacity-30 mix-blend-screen"
-              animate={
-                reduce
-                  ? undefined
-                  : { y: ["6%", "-4%", "5%"], opacity: [0.15, 0.30, 0.18] }
-              }
-              transition={{ duration: 9, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              style={{
-                background:
-                  "radial-gradient(ellipse 80% 50% at 30% 90%, rgba(148,163,184,0.38), transparent 55%)",
+                  "linear-gradient(105deg, transparent 20%, rgba(255,255,255,0.04) 45%, transparent 70%)",
               }}
               aria-hidden
             />
@@ -253,7 +225,6 @@ export function HeroIdentityPortrait() {
                   height: "6%",
                   background:
                     "radial-gradient(ellipse at center, rgba(251,191,36,0.22), transparent 70%)",
-                  filter: "blur(6px)",
                 }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: [0, 1, 0.7] }}

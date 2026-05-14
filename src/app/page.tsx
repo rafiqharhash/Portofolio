@@ -24,7 +24,7 @@ export default function Home() {
       <GridBackground />
       <GuardianWatermark />
       <FloatingParticles />
-      <CursorSpotlight />
+      {/* <CursorSpotlight /> */}
       <GuardianMouseFollower />
       <div className="relative z-10">
         <SiteHeader />

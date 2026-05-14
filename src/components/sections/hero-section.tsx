@@ -39,9 +39,12 @@ function useTypewriter(text: string, active: boolean, ms = 28) {
   return out;
 }
 
-export function HeroSection() {
-  const typed = useTypewriter(site.tagline, true, 22);
+function TypewriterText({ text, ms = 32 }: { text: string; ms?: number }) {
+  const typed = useTypewriter(text, true, ms);
+  return <>{typed}</>;
+}
 
+export function HeroSection() {
   return (
     <section
       id="top"
@@ -50,8 +53,8 @@ export function HeroSection() {
       <AtmosphericFog />
 
       {/* Spotlight cones */}
-      <div className="pointer-events-none absolute left-1/4 top-0 z-[4] h-[85vh] w-[45vw] -translate-x-1/2 bg-[radial-gradient(ellipse_at_50%_0%,rgba(251,191,36,0.09),transparent_58%)] blur-3xl" aria-hidden />
-      <div className="pointer-events-none absolute right-0 top-1/4 z-[4] h-[70vh] w-[40vw] bg-[radial-gradient(circle_at_70%_30%,rgba(56,189,248,0.07),transparent_55%)] blur-3xl" aria-hidden />
+      <div className="pointer-events-none absolute left-1/4 top-0 z-[4] h-[85vh] w-[45vw] -translate-x-1/2 bg-[radial-gradient(ellipse_at_50%_0%,rgba(251,191,36,0.09),transparent_60%)]" aria-hidden />
+      <div className="pointer-events-none absolute right-0 top-1/4 z-[4] h-[70vh] w-[40vw] bg-[radial-gradient(circle_at_70%_30%,rgba(56,189,248,0.07),transparent_60%)]" aria-hidden />
 
       <div className="relative z-10 mx-auto grid w-full max-w-6xl gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(280px,440px)] lg:items-center lg:gap-12">
         <div>
@@ -98,7 +101,9 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65, delay: 0.18 }}
           >
-            <span className="text-white/85">{typed}</span>
+            <span className="text-white/85">
+              <TypewriterText text={site.tagline} />
+            </span>
             <span className="ml-0.5 inline-block h-5 w-px translate-y-0.5 bg-amber-400/90 animate-pulse" />
           </motion.p>
 

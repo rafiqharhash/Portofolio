@@ -1,29 +1,29 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Rocket, Search, Wrench, Zap } from "lucide-react";
+import { Rocket, Search, Target, Wrench, Zap } from "lucide-react";
 import { SectionHeading } from "@/components/layout/section-heading";
 
 const steps = [
   {
-    title: "Programming fundamentals",
-    body: "Syntax becomes intuition when you practice deliberately—loops, logic, and structure first.",
+    title: "Programming Fundamentals",
+    body: "Building a strong foundation in logic, algorithms, and structured thinking through consistent practice and problem solving.",
     icon: Zap,
   },
   {
-    title: "Exploring web development",
-    body: "From components to composition: learning how modern interfaces are engineered end-to-end.",
+    title: "Exploring Modern Web Development",
+    body: "Learning how scalable web applications are designed—from responsive interfaces to interactive user experiences.",
     icon: Search,
   },
   {
-    title: "Building real-world projects",
-    body: "Shipping small, meaningful pieces that teach versioning, polish, and iteration under constraints.",
+    title: "Creating Real-World Projects",
+    body: "Turning ideas into functional products while improving development workflow, UI polish, and technical execution.",
     icon: Wrench,
   },
   {
-    title: "Improving problem solving",
-    body: "Patterns, edge cases, and persistence—turning messy questions into repeatable approaches.",
-    icon: Rocket,
+    title: "Competitive Problem Solving",
+    body: "Strengthening analytical thinking through algorithms, edge cases, optimization, and coding challenges on platforms like Codeforces and LeetCode.",
+    icon: Target,
   },
 ];
 
@@ -34,7 +34,7 @@ export function ExperienceSection() {
         <SectionHeading
           eyebrow="Journey"
           title="Experience shaped by curiosity"
-          subtitle="A timeline of focus areas—each stage reinforces the next."
+          subtitle="Every stage built the foundation for the next—driven by consistency, experimentation, and growth."
         />
 
         <div className="relative">

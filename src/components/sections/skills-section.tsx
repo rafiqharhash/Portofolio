@@ -1,28 +1,43 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Braces, GitBranch, Layers, LayoutTemplate, Paintbrush, PenTool } from "lucide-react";
+import { Activity, Blocks, Box, Braces, BrainCircuit, Command, Cpu, Database, FileCode2, Flame, GitBranch, Globe, HardDrive, Layers, Paintbrush, PenTool, Target, Terminal, Wrench } from "lucide-react";
 import { SectionHeading } from "@/components/layout/section-heading";
 import { cn } from "@/lib/utils";
 
 const categories = [
   {
-    name: "Programming",
+    name: "Languages",
     items: [
-      { label: "Java", icon: Braces, hint: "OOP, fundamentals, practice" },
-      { label: "C++", icon: Layers, hint: "Memory, performance mindset" },
+      { label: "Java", icon: Braces, hint: "Object-oriented development and backend foundations" },
+      { label: "C / C++ / C#", icon: Terminal, hint: "Efficient problem solving and system-level logic" },
+      { label: "JavaScript / TypeScript", icon: FileCode2, hint: "Building immersive and modern web experiences" },
+      { label: "HTML & CSS", icon: Globe, hint: "Designing responsive interfaces with precision and creativity" },
+      { label: "R", icon: Activity, hint: "Statistical computing, data analysis, and visualization fundamentals" },
+      { label: "Bash", icon: Command, hint: "Command-line automation and development workflow management" },
     ],
   },
   {
-    name: "Design",
+    name: "Frameworks & Data",
     items: [
-      { label: "Canva", icon: Paintbrush, hint: "Layouts & visual rhythm" },
-      { label: "Figma", icon: LayoutTemplate, hint: "Components & prototyping" },
+      { label: "React", icon: Box, hint: "Interactive UI engineering with modern component architecture" },
+      { label: "Next.js", icon: Blocks, hint: "Production-ready full-stack web experiences" },
+      { label: "Node.js", icon: Layers, hint: "Backend systems and API development" },
+      { label: "MongoDB", icon: Database, hint: "Scalable NoSQL data management" },
+      { label: "SQLite", icon: HardDrive, hint: "Lightweight relational database management for local applications" },
+      { label: "Firebase", icon: Flame, hint: "Real-time backend services, authentication, and cloud integration" },
     ],
   },
   {
-    name: "Tools",
-    items: [{ label: "Git / GitHub", icon: GitBranch, hint: "Versioning & collaboration" }],
+    name: "Ecosystem & Workflow",
+    items: [
+      { label: "AI-Augmented Engineering", icon: BrainCircuit, hint: "Leveraging AI to accelerate development and creative workflows" },
+      { label: "Cursor • Claude • Antigravity", icon: Cpu, hint: "Advanced AI ecosystems for coding, architecture, and experimentation" },
+      { label: "Git & GitHub", icon: GitBranch, hint: "Professional collaboration and scalable version control workflows" },
+      { label: "Developer Ecosystem", icon: Wrench, hint: "Modern tooling, deployment pipelines, and productivity optimization" },
+      { label: "Competitive Problem Solving", icon: Target, hint: "Analytical thinking through algorithms and coding challenges" },
+      { label: "Design Sensibility", icon: Paintbrush, hint: "Balancing engineering with cinematic user experiences" },
+    ],
   },
 ];
 

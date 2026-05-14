@@ -2,7 +2,7 @@ export const site = {
   name: "Rafiq Harhash",
   title: "Computer Science & Engineering Student",
   tagline:
-    "Currently learning Java, structured programming, and problem solving. Building projects step by step.",
+    "Working with Java, C/C++/C#, full-stack web technologies, and AI workflows. Building projects step by step.",
   email: "rafeqnusr@icloud.com",
   githubUsername: process.env.NEXT_PUBLIC_GITHUB_USERNAME ?? "rafeqnusr",
   social: {

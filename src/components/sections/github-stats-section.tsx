@@ -8,9 +8,9 @@ import { SectionHeading } from "@/components/layout/section-heading";
 const user = site.githubUsername;
 
 // Dark Guardian Theme: Amber/Gold/Orange
-const statsUrl = `https://github-readme-stats.vercel.app/api?username=${user}&show_icons=true&theme=dark&hide_border=true&bg_color=00000000&title_color=fbbf24&icon_color=f59e0b&text_color=e5e7eb&rank_icon=github&border_radius=20`;
+const statsUrl = `https://github-readme-stats-eight-theta.vercel.app/api?username=${user}&show_icons=true&theme=dark&hide_border=true&bg_color=00000000&title_color=fbbf24&icon_color=f59e0b&text_color=e5e7eb&rank_icon=github&border_radius=20`;
 const streakUrl = `https://streak-stats.demolab.com?user=${user}&theme=dark&hide_border=true&background=00000000&ring=fbbf24&currStreakLabel=fbbf24&fire=fbbf24&sideNums=e5e7eb&sideLabels=e5e7eb&dates=9ca3af&stroke=fbbf24`;
-const langsUrl = `https://github-readme-stats.vercel.app/api/top-langs/?username=${user}&layout=donut&theme=dark&hide_border=true&bg_color=00000000&title_color=fbbf24&text_color=e5e7eb&border_radius=20&langs_count=8`;
+const langsUrl = `https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=${user}&layout=donut&theme=dark&hide_border=true&bg_color=00000000&title_color=fbbf24&text_color=e5e7eb&border_radius=20&langs_count=8`;
 
 export function GithubStatsSection() {
   return (
@@ -33,13 +33,12 @@ export function GithubStatsSection() {
           >
             <div className="absolute inset-0 z-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-[radial-gradient(circle_at_50%_50%,rgba(251,191,36,0.04),transparent_70%)]" />
             <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-white/30 group-hover:text-amber-400/40 transition-colors">Overall Performance</p>
-            <Image
+            <img
               src={statsUrl}
               alt={`GitHub stats for ${user}`}
               width={495}
               height={195}
               className="relative z-10 h-auto w-full filter transition-all duration-500 group-hover:saturate-[1.2]"
-              unoptimized
             />
           </motion.div>
 
@@ -53,13 +52,12 @@ export function GithubStatsSection() {
           >
             <div className="absolute inset-0 z-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-[radial-gradient(circle_at_50%_50%,rgba(251,191,36,0.04),transparent_70%)]" />
             <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-white/30 group-hover:text-amber-400/40 transition-colors">Commit Pulse</p>
-            <Image
+            <img
               src={streakUrl}
               alt={`GitHub streak stats for ${user}`}
               width={495}
               height={195}
               className="relative z-10 h-auto w-full filter transition-all duration-500 group-hover:saturate-[1.2]"
-              unoptimized
             />
           </motion.div>
 
@@ -73,13 +71,12 @@ export function GithubStatsSection() {
           >
             <div className="absolute inset-0 z-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-[radial-gradient(circle_at_50%_50%,rgba(251,191,36,0.05),transparent_70%)]" />
             <p className="mb-6 text-xs font-semibold uppercase tracking-widest text-white/30 group-hover:text-amber-400/40 transition-colors">Technology Distribution</p>
-            <Image
+            <img
               src={langsUrl}
               alt={`Top languages for ${user}`}
               width={600}
               height={300}
               className="relative z-10 h-auto w-full max-w-2xl filter transition-all duration-500 group-hover:saturate-[1.2]"
-              unoptimized
             />
           </motion.div>
         </div>

@@ -8,22 +8,29 @@ import { Card, CardContent } from "@/components/ui/card";
 const timeline = [
   {
     year: "2025",
-    title: "University foundations",
-    body: "Diving into structured programming, discrete thinking, and disciplined practice.",
+    title: "University Foundations",
+    body: "Establishing core computer science principles through structured programming, logical thinking, and disciplined problem-solving habits.",
   },
   {
     year: "Now",
-    title: "Hands-on building",
-    body: "Turning concepts into interfaces—small projects, clear goals, steady iteration.",
+    title: "Hands-on Building",
+    body: "Applying knowledge through real projects—translating concepts into interfaces, improving through iteration, and focusing on shipping functional work.",
   },
   {
     year: "Next",
-    title: "Depth + breadth",
-    body: "Sharpening problem solving while exploring web stacks and thoughtful UI craft.",
+    title: "Depth & Breadth",
+    body: "Strengthening algorithmic thinking while expanding into modern web development, scalable systems, and refined UI/UX design principles.",
   },
 ];
 
-const chips = ["Java", "C++", "Problem Solving", "UI Design", "Learning mindset"];
+const chips = [
+  "Java",
+  "C++",
+  "Problem Solving",
+  "UI/UX Design",
+  "Software Engineering Mindset",
+  "Continuous Learning",
+];
 
 export function AboutSection() {
   return (
@@ -55,17 +62,39 @@ export function AboutSection() {
                   ))}
                 </div>
                 <p className="text-sm leading-relaxed text-white/65 md:text-base">
-                  I am a first-year Computer Science & Engineering student focused on fundamentals
-                  that compound: strong programming habits, structured problem solving, and design
-                  intuition that respects the user. I learn publicly, ship quietly, and iterate with
-                  intention.
+                  I am a Computer Science & Engineering student focused on building strong,
+                  compounding fundamentals in software development. My focus lies in writing clean,
+                  structured code, developing consistent problem-solving habits, and cultivating a
+                  strong sense of design and user experience.
+                </p>
+                <p className="text-sm leading-relaxed text-white/65 md:text-base">
+                  I approach learning with discipline and intention—breaking down complex problems,
+                  building small but meaningful projects, and continuously improving through
+                  iteration and practice. I value clarity over complexity, and long-term skill
+                  growth over short-term output.
                 </p>
                 <div className="grid gap-4 sm:grid-cols-2">
                   {[
-                    { icon: Cpu, t: "Engineering mindset", d: "Precision, debugging, and patience." },
-                    { icon: Palette, t: "Design sensitivity", d: "Hierarchy, spacing, and motion." },
-                    { icon: BookOpen, t: "Continuous study", d: "Notes, drills, and real projects." },
-                    { icon: Target, t: "Outcome aware", d: "Small wins that stack into skill." },
+                    {
+                      icon: Cpu,
+                      t: "Engineering Mindset",
+                      d: "Strong focus on clean logic, debugging, and building structured, scalable solutions.",
+                    },
+                    {
+                      icon: Palette,
+                      t: "Design Awareness",
+                      d: "Attention to hierarchy, spacing, and smooth user experience in interfaces.",
+                    },
+                    {
+                      icon: BookOpen,
+                      t: "Continuous Learning",
+                      d: "Constant improvement through practice, projects, and real-world problem solving.",
+                    },
+                    {
+                      icon: Target,
+                      t: "Execution Driven",
+                      d: "Turning ideas into small, consistent projects and improving through iteration.",
+                    },
                   ].map((item) => (
                     <div
                       key={item.t}
@@ -92,7 +121,10 @@ export function AboutSection() {
             <Card className="relative border-white/[0.09] bg-black/35">
               <CardContent className="p-8">
                 <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white/45">
-                  Learning journey
+                  Learning Journey
+                </p>
+                <p className="mt-2 text-xs text-white/35">
+                  A progression built on consistency, curiosity, and deliberate practice.
                 </p>
                 <ol className="mt-8 space-y-8">
                   {timeline.map((row, idx) => (
